@@ -27,13 +27,6 @@ This project was built to provide a **lightweight, dependency-free** vertical ta
   - [Overriding Styles](#overriding-styles)
   - [Example Customization](#example-customization)
 
-### **About This Project**
-
-This project was built to provide a **lightweight, dependency-free** vertical tab component for internal use. Designed with **scalability, customization, and performance** in mind, this system leverages **CSS variables** for styling flexibility and **vanilla JavaScript** for fast execution.
-
-
-[Contact](mailto:andrew.ashley@leadventure.com)
-
 ## Features
 
 **Dynamic Tab Generation** – Just pass a config object.  
