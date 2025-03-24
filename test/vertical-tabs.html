@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LV Vertical Tabs</title>
+    <script src="../build/lv-vertical-tabs.min.js"></script>
+    <link rel="stylesheet" href="../src/lv-vertical-tabs.css" />
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+
+    <div class="container">
+      <div id="vertical-tabs-left"></div>
+    </div>
+
+    <div class="container">
+      <div id="vertical-tabs-right"></div>
+    </div>
+
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        createVerticalTabs({
+          id: 1,
+          container: "#vertical-tabs-left",
+          position: "left",
+          debug: true,
+          tabs: [
+            {
+              title: "Tab One",
+              text: "Content for tab one.",
+              button: { text: "Learn More", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+            {
+              title: "Tab Two",
+              text: "Content for tab two.",
+              button: { text: "Explore Options", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+            {
+              title: "Tab Three",
+              text: "Content for tab three.",
+              button: { text: "Learn More", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+            {
+              title: "Tab Four",
+              text: "Content for tab four.",
+              // button: { text: "Learn More", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+          ],
+        });
+
+        createVerticalTabs({
+          id: 2,
+          container: "#vertical-tabs-right",
+          position: "right",
+          tabs: [
+            {
+              title: "Tab One",
+              text: "Content for tab one.",
+              button: { text: "Learn More", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+            {
+              title: "Tab Two",
+              text: "Content for tab two.",
+              button: { text: "Explore Options", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+            {
+              title: "Tab Three",
+              text: "Content for tab three.",
+              button: { text: "Learn More", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+            {
+              title: "Tab Four",
+              text: "Content for tab four.",
+              // button: { text: "Learn More", url: "#" },
+              image: "./images/placeholder.jpg",
+            },
+          ],
+        });
+
+        // Enable automatic cycling of tabs
+        autoCycleTabs("#vertical-tabs-left", 3000);
+        autoCycleTabs("#vertical-tabs-right", 3000);
+      });
+    </script>
+  </body>
+</html>
