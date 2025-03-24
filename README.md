@@ -76,6 +76,7 @@ Add the following **HTML structure**:
       id: 1,
       container: "#vertical-tabs-left",
       position: "left",
+      debug: true, // Debug flag if needed to show tab cycle information
       tabs: [
         {
           title: "Tab One",
@@ -119,6 +120,8 @@ Add the following **HTML structure**:
 </script>
 ```
 
+> **Debug Mode**: Setting `debug: true` will overlay a small box beneath each tab image showing the tab's index, image URL, and button info. Useful during development.
+
 ---
 
 ## **Configuration Options**
@@ -128,6 +131,7 @@ Add the following **HTML structure**:
 | `container` | `string` | `""`     | The selector for the tab container.               |
 | `position`  | `string` | `"left"` | Set tab alignment (`"left"` or `"right"`).        |
 | `tabs`      | `array`  | `[]`     | List of tab objects (title, text, image, button). |
+| `debug`     | `boolean`| `false`  | Show overlay with debug info for each tab (index, image, button).|
 
 Each **tab object** should follow this format:
 

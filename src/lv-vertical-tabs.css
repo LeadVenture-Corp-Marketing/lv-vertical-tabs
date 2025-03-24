@@ -17,6 +17,10 @@
   --vt-button-font-size: 16px;
   --vt-button-border-radius: 4px 4px 25px 25px;
   --vt-button-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --vt-debug-border-radius: 8px;
+  --vt-debug-text-color: var(--vt-secondary-color);
+  --vt-debug-background-color: rgba(26, 26, 26, 0.75);
+  --vt-debug-box-shadow: var(--vt-button-box-shadow);
 }
 
 /* Base Layout
@@ -120,6 +124,20 @@
   margin-inline: auto;
   transition: all 0.3s ease;
   box-shadow: var(--vt-button-box-shadow);
+}
+
+/* Debugging
+   ============================================================= */
+.vt__debug {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  color: var(--vt-debug-text-color);
+  border-radius: var(--vt-debug-border-radius);
+  background-color: var(--vt-debug-background-color);
+  box-shadow: var(--vt-debug-box-shadow);
+  pointer-events: none;
 }
 
 /* Position Variants
